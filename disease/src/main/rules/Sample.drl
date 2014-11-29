@@ -1,0 +1,159 @@
+package com.sample;
+ 
+import com.sample.DroolsTest.Message;
+import com.sample.DroolsTest.Check;
+ 
+
+rule "comp1"
+when 
+    Check (s1 == 1 && s2 == 1 && s3 == 1 && s4 == 0 && s5 == 1 && o == 0)
+then 
+    System.out.println ("d1");
+end
+
+rule "comp2"
+when 
+    Check (s1 == 0 && s2 == 1 && s3 == 1 && s4 == 0 && s5 == 0 && o == 0)
+then 
+    System.out.println ("d2");
+end
+
+rule "comp3"
+when
+    Check (s1 == 1 && s2 == 0 && s3 == 0 && s4 == 1 && s5 == 1 && o == 0)
+then
+    System.out.println ("d3");
+end
+
+rule "comp4"
+when
+    Check (s1 == 0 && s2 == 0 && s3 == 1 && s4 == 1 && s5 == 1 && o == 0)
+then
+    System.out.println ("d4");
+end
+
+rule "comp5"
+when 
+    Check (s1 == 1 && s2 == 1 && s3 == 1 && s4 == 0 && s5 == 0 && o == 0)
+then
+    System.out.println ("d5");
+end
+
+rule "unknown"
+when 
+    Check (o == 1) 
+then
+    System.out.println ("Unknown disease");
+end
+
+rule "just1"
+when 
+    Check (s1 == 1 && s2 == 0 && s3 == 0 && s4 == 0 && s5 == 0 && o == 0)
+then 
+    System.out.println ("d1\nd3\nd5");
+end
+
+rule "s1"
+when
+    Check (s1 == 0 && s2 == 1 && s3 == 0 && s4 == 0 && s5 == 0 && o == 0)
+then
+    System.out.println ("d1\nd2\nd5");
+end
+
+rule "s2"
+when
+    Check (s1 == 0 && s2 == 0 && s3 == 1 && s4 == 0 && s5 == 0 && o == 0)
+then 
+    System.out.println ("d1\nd2\nd4\nd5");
+end
+
+rule "s3"
+when
+    Check (s1 == 0 && s2 == 0 && s3 == 0 && s4 == 1 && s5 == 0 && o == 0)
+then
+    System.out.println ("d3\nd4");
+end
+
+rule "s4"
+when 
+    Check (s1 == 0 && s2 == 0 && s3 == 0 && s4 == 0 && s5 == 1 && o == 0)
+then
+    System.out.println ("d1\nd3\nd4");
+end
+
+rule "j2"
+when 
+    Check (s1 == 1 && s2 == 1 && s3 == 0 && s4 == 0 && s5 == 0 && o == 0)
+then   
+    System.out.println ("d1\nd5");
+end
+
+rule "j3"
+when
+    Check (s1 == 1 && s2 == 0 && s3 == 1 && s4 == 0 && s5 == 0 && o == 0)
+then 
+    System.out.println ("d1\nd5");
+end
+
+rule "j4"
+when
+    Check (s1 == 1 && s2 == 0 && s3 == 0 && s4 == 1 && s5 == 0 && o == 0)
+then
+    System.out.println ("d3");
+end
+
+rule "j5"
+when 
+    Check (s1 == 1 && s2 == 0 && s3 == 0 && s4 == 0 && s5 == 1 && o == 0)
+then
+    System.out.println ("d1\nd3");
+end
+
+rule "j6"
+when
+    Check (s1 == 0 && s2 == 1 && s3 == 0 && s4 == 0 && s5 == 1 && o == 0)
+then
+    System.out.println ("d1");
+end
+
+rule "j7"
+when
+    Check (s1 == 0 && s2 == 0 && s3 == 1 && s4 == 1 && s5 == 0 && o == 0)
+then 
+    System.out.println ("d4");
+end
+
+rule "j8"
+when
+    Check (s1 == 0 && s2 == 0 && s3 == 1 && s4 == 0 && s5 == 1 && o == 0)
+then
+    System.out.println ("d3\nd5");
+end
+
+rule "j9"
+when
+     Check (s1 == 0 && s2 == 0 && s3 == 0 && s4 == 1 && s5 == 1 && o == 0)
+then
+    System.out.println ("d3\nd4");
+end
+
+rule "j10"
+when
+    Check (s1 == 1 && s2 == 1 && s3 == 0 && s4 == 0 && s5 == 1 && o == 0)
+then 
+    System.out.println ("d1");
+end
+
+rule "j11"
+when
+        Check (s1 == 1 && s2 == 0 && s3 == 1 && s4 == 0 && s5 == 1 && o == 0)
+then
+    System.out.println ("d1");
+end
+
+rule "j12"
+when
+        Check (s1 == 0 && s2 == 1 && s3 == 1 && s4 == 0 && s5 == 1 && o == 0)
+then
+    System.out.println ("d1");
+end

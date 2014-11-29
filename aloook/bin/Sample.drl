@@ -1,0 +1,25 @@
+package com.sample
+ 
+import com.sample.DroolsTest.Cheese;
+import com.sample.DroolsTest.Person;
+ 
+rule "likes"
+when
+	Cheese($cheddar : name == "tamatar" )
+	$person : Person( cheese == $cheddar  )
+then
+	System.out.println( $person.getName() + " likes cheddar" );
+end
+
+rule "dislikes"
+when
+	Cheese( $cheddar : name == "tamatar" )
+	$person : Person( cheese != $cheddar )
+then
+	System.out.println( $person.getName() + " does not like cheddar" );
+end
+
+
+
+
+	

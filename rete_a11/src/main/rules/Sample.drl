@@ -1,0 +1,169 @@
+package com.sample
+ 
+import com.sample.DroolsTest.Message;
+
+rule "+ / . general"
+salience 200
+when
+	e1:Message(hihi())
+then 
+	System.out.println("using (A+A) = A and (A.A) = A");
+	System.out.println("str " + e1.s);
+	update(e1);
+
+end;
+
+rule " matched"
+salience 500
+when 
+	e1:Message(match())
+then
+	
+	System.out.println("They are Equal");
+end;
+
+
+rule "a.1 = a"
+salience 200
+when
+	e1:Message(aonea() == true)
+then 
+	System.out.println("A.1 = A");
+	System.out.println("str " + e1.s);
+	update(e1);
+
+end;
+
+rule "dotdot"
+salience 200
+when
+	e1:Message(dotdot() == true)
+then 
+	System.out.println("A.(B.A) = A.B");
+	System.out.println("str " + e1.s);
+	update(e1);
+end;
+
+rule "dotdota"
+salience 200
+when
+	e1:Message(dotdota() == true)
+then 
+	System.out.println("(A.B).A) = A.B");
+	System.out.println("str " + e1.s);
+	update(e1);
+end;
+
+rule "minusminus"
+salience 200
+when
+	e1:Message(minusminus() == true)
+then 
+	System.out.println("(A+B)+A = A+B");
+	System.out.println("str " + e1.s);
+	update(e1);
+end;
+
+
+
+
+rule "plusplus"
+salience 200
+when
+	e1:Message(plusplus() == true)
+then 
+	//System.out.println("A+(B+A) = A+B");
+	System.out.println("str " + e1.s);
+	update(e1);
+
+end;
+
+
+rule "as"
+salience 100
+when 
+	e1:Message((sortit2() == true))
+	
+then
+	System.out.println("2)))");
+	
+	System.out.println(e1.s);
+	update(e1);
+end;
+
+
+rule "as_further_distribution"
+when 
+	e1:Message( sortit3() == true)
+then 
+	System.out.println("ASDF: " + e1.s);
+	update(e1);
+end;
+
+
+rule "end"
+when
+	e1:Message((ff != 1) && !hihi() && (sortit2() != true)&& (sortit3() != true) && (dotdot() != true) && (plusplus() != true) &&(dotdota() != true) && (minusminus()!= true) )	
+then
+	System.out.println("NO RULE APPLICABLE");
+	e1.fofo();
+	System.out.println(e1.s);
+	
+end;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+rule "sd"
+when 
+	e1:Message((sss == 0)&&(ff != 1) && !hihi() && (sortit2() != true)&& (sortit3() != true) && (dotdot() != true) && (plusplus() != true) &&(dotdota() != true) && (minusminus()!= true) )	
+then
+	e1.hoho();
+	System.out.println(e1.s);
+	update(e1);
+end;
+	
+
+
+	
+	
+
+
+	
+
+
+

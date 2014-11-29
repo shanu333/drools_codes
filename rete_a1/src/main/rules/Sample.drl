@@ -1,0 +1,59 @@
+package com.sample
+ 
+import com.sample.DroolsTest.Message;
+
+ 
+rule "a+a"
+when 
+	e1 : Message(s.indexOf("a+a") != -1)
+then
+	e1.replace("a+a", "a");
+	update(e1);
+	System.out.println(e1.s);
+end
+
+rule "b+b"
+when 
+	e1 : Message(s.indexOf("b+b") != -1)
+then
+	e1.replace("b+b", "b");
+	update(e1);
+	System.out.println(e1.s);
+end
+
+rule "a.a"
+when 
+	e1 : Message(s.indexOf("a.a") != -1)
+then
+	e1.replace("a.a", "a");
+	update(e1);
+	System.out.println(e1.s);
+end
+
+rule "b.b"
+when 
+	e1 : Message(s.indexOf("b.b") != -1)
+then
+	e1.replace("b.b", "b");
+	update(e1);
+	System.out.println(e1.s);
+end
+
+rule "!!a"
+when 
+	e1 : Message(s.indexOf("!!a") != -1)
+then
+	e1.replace("!!a", "a");
+	update(e1);
+	System.out.println(e1.s);
+end
+
+rule "!!b"
+when 
+	e1 : Message(s.indexOf("!!b") != -1)
+then
+	e1.replace("!!b", "b");
+	update(e1);
+	System.out.println(e1.s);
+end
+

@@ -1,0 +1,28 @@
+import drool_pack.Message
+/*rule "ABC"
+when
+    message:Message (type=="Hello")
+then
+    for (int i = 0; i < 2; i++)
+        System.out.println("Hello World, Drools!");
+end
+*/
+//global java.util.List list
+ 
+rule "Hello World"
+    dialect "mvel"
+    when
+        m:Message (type=="Hello")
+    then
+      //  System.out.println( message );
+    modify ( m ) {type = "lelo" };
+    System.out.println("\n" + m.type);
+end
+
+rule "Good Bye"
+    dialect "java"
+    when
+        Message (type=="Alert")
+    then
+        System.out.println( "Fir Fire FIRre" );
+end

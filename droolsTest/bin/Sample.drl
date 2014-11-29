@@ -1,0 +1,223 @@
+package com.sample
+ 
+import com.sample.DroolsTest.conditions;
+
+
+rule "s1"
+when 
+    conditions(s1 == 1 && s2 == 0 && s3 == 0 && s4 == 0 && s5 == 0)
+then 
+    System.out.println("D1, D3, D5");
+end
+
+rule "s2"
+when 
+    conditions(s1 == 0 && s2 == 1 && s3 == 0 && s4 == 0 && s5 == 0)
+then 
+    System.out.println("D1, D2, D5");
+end
+
+rule "s3"
+when 
+    conditions(s1 == 0 && s2 == 0 && s3 == 1 && s4 == 0 && s5 == 0)
+then 
+    System.out.println("D1, D2, D4, D5");
+end
+
+rule "s4"
+when 
+    conditions(s1 == 0 && s2 == 0 && s3 == 0 && s4 == 1 && s5 == 0)
+then 
+    System.out.println("D3, D4");
+end
+
+rule "s5"
+when 
+    conditions(s1 == 0 && s2 == 0 && s3 == 0 && s4 == 0 && s5 == 1)
+then 
+    System.out.println("D1, D3, D4");
+end
+
+rule "s1s2"
+when 
+    conditions(s1 == 1 && s2 == 1 && s3 == 0 && s4 == 0 && s5 == 0)
+then 
+    System.out.println("D1, D5");
+end
+
+rule "s1s3"
+when 
+    conditions(s1 == 1 && s2 == 0 && s3 == 1 && s4 == 0 && s5 == 0)
+then 
+    System.out.println("D1, D5");
+end
+
+rule "s1s4"
+when 
+    conditions(s1 == 1 && s2 == 0 && s3 == 0 && s4 == 1 && s5 == 0)
+then 
+    System.out.println("D3");
+end
+
+rule "s1s5"
+when 
+    conditions(s1 == 1 && s2 == 0 && s3 == 0 && s4 == 0 && s5 == 1)
+then 
+    System.out.println("D1, D3");
+end
+
+rule "s2s3"
+when 
+    conditions(s1 == 0 && s2 == 1 && s3 == 1 && s4 == 0 && s5 == 0)
+then 
+    System.out.println("D2");
+end
+
+rule "s2s4"
+when 
+    conditions(s1 == 0 && s2 == 1 && s3 == 0 && s4 == 1 && s5 == 0)
+then 
+    System.out.println("Unknown disease");
+end
+
+rule "s2s5"
+when 
+    conditions(s1 == 0 && s2 == 1 && s3 == 0 && s4 == 0 && s5 == 1)
+then 
+    System.out.println("D1");
+end
+
+rule "s3s4"
+when 
+    conditions(s1 == 0 && s2 == 0 && s3 == 1 && s4 == 1 && s5 == 0)
+then 
+    System.out.println("D4");
+end
+
+rule "s3s5"
+when 
+    conditions(s1 == 0 && s2 == 0 && s3 == 1 && s4 == 0 && s5 == 1)
+then 
+    System.out.println("D1, D4");
+end
+
+rule "s4s5"
+when 
+    conditions(s1 == 0 && s2 == 0 && s3 == 0 && s4 == 1 && s5 == 1)
+then 
+    System.out.println("D3, D4");
+end
+
+rule "s1s2s3"
+when 
+    conditions(s1 == 1 && s2 == 1 && s3 == 1 && s4 == 0 && s5 == 0)
+then 
+    System.out.println("D5");
+end
+
+rule "s1s2s4"
+when 
+    conditions(s1 == 1 && s2 == 1 && s3 == 0 && s4 == 1 && s5 == 0)
+then 
+    System.out.println("unknown disease");
+end
+
+rule "s1s2s5"
+when 
+    conditions(s1 == 1 && s2 == 1 && s3 == 0 && s4 == 0 && s5 == 1)
+then 
+    System.out.println("D1");
+end
+
+rule "s1s3s4"
+when 
+    conditions(s1 == 1 && s2 == 0 && s3 == 1 && s4 == 1 && s5 == 0)
+then 
+    System.out.println("unknown");
+end
+
+rule "s1s3s5"
+when 
+    conditions(s1 == 1 && s2 == 0 && s3 == 1 && s4 == 0 && s5 == 1)
+then 
+    System.out.println("D1");
+end
+
+rule "s1s4s5"
+when 
+    conditions(s1 == 1 && s2 == 0 && s3 == 0 && s4 == 1 && s5 == 1)
+then 
+    System.out.println("D3");
+end
+
+rule "s2s4s5"
+when 
+    conditions(s1 == 0 && s2 == 1 && s3 == 0 && s4 == 1 && s5 == 1)
+then 
+    System.out.println("unknown disease");
+end
+
+rule "s2s3s4"
+when 
+    conditions(s1 == 0 && s2 == 1 && s3 == 1 && s4 == 1 && s5 == 0)
+then 
+    System.out.println("unknown disease");
+end
+
+rule "s2s3s5"
+when 
+    conditions(s1 == 0 && s2 == 1 && s3 == 1 && s4 == 0 && s5 == 1)
+then 
+    System.out.println("d1");
+end
+
+
+rule "s1s2s3s4"
+when 
+    conditions(s1 == 1 && s2 == 1 && s3 == 1 && s4 == 1 && s5 == 0)
+then 
+    System.out.println("unknown disease");
+end
+
+rule "s1s2s3s5"
+when 
+    conditions(s1 == 1 && s2 == 1 && s3 == 1 && s4 == 0 && s5 == 1)
+then 
+    System.out.println("D1");
+end
+
+rule "S1s3s4s5"
+when 
+    conditions(s1 == 1 && s2 == 0 && s3 == 1 && s4 == 1 && s5 == 1)
+then 
+    System.out.println("unknown disease");
+end
+
+rule "s1s2s4s5"
+when 
+    conditions(s1 == 1 && s2 == 1 && s3 == 0 && s4 == 1 && s5 == 1)
+then 
+    System.out.println("unknown disease");
+end
+
+rule "s2s3s4s5"
+when 
+    conditions(s1 == 0 && s2 == 1 && s3 == 1 && s4 == 1 && s5 == 1)
+then 
+    System.out.println("unkonown disease");
+end
+
+rule "s1s2s3s4s5"
+when 
+    conditions(s1 == 1 && s2 == 1 && s3 == 1 && s4 == 1 && s5 == 1)
+then 
+    System.out.println("unknown disease");
+end
+
+rule "other disease"
+when
+    conditions(other == 1)
+then 
+    System.out.println("Unknown disease");
+end
+

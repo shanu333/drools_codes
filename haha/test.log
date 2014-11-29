@@ -1,0 +1,7 @@
+<object-stream>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>1</factId>
+  <objectToString>com.sample.DroolsTest$Check@1b6235b</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+</object-stream>
